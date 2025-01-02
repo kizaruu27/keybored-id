@@ -65,12 +65,15 @@ export default function LoginPage() {
         </div>
       </div>
       <div className={styles.login__formSection}>
-        <div className={styles.login__formSection__formContainer}>
+        <div className={styles.login__formSection__formRegisterContainer}>
           <Image
             src={logo}
             alt=""
             className={styles.login__formSection__formContainer__logo}
           />
+          <h1 className={styles.login__formSection__formContainer__title}>
+            Register Your Account
+          </h1>
           <form action="" className={styles.login__formSection__formContainer__form}>
             <div className={styles.login__formSection__formContainer__form__formItem}>
               <label
@@ -108,20 +111,35 @@ export default function LoginPage() {
                 }
               />
             </div>
+            <div className={styles.login__formSection__formContainer__form__formItem}>
+              <label
+                htmlFor="password-confirmation"
+                className={
+                  styles.login__formSection__formContainer__form__formItem__label
+                }
+              >
+                confirm your password
+              </label>
+              <input
+                type="password"
+                name="password-confirmation"
+                id="password-confirmation"
+                className={
+                  styles.login__formSection__formContainer__form__formItem__input
+                }
+              />
+            </div>
           </form>
           <div>
             <button
               className="bg-[#FFD20D] w-full p-2 font-semibold rounded-lg mb-5"
               type="submit"
             >
-              Sign In
+              Register
             </button>
-            <button className="bg-[#D9D9D9] w-full p-2 font-semibold rounded-lg mb-5 flex items-center justify-center gap-3">
-              <Image src={google} alt="google" className="w-5" />
-              <span>Sign In with Google</span>
-            </button>
+
             <p className="text-center text-sm font-semibold">
-              Don{"'"}t have an account? Sign up{" "}
+              Already have an account? Sign in{" "}
               <Link href="/register" className="text-[#1276D2]">
                 here
               </Link>
