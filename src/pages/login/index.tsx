@@ -13,57 +13,39 @@ export default function LoginPage() {
     <div className={styles.login}>
       {/* Images Grid */}
       <div className={styles.login__imageSection}>
-        <div className={styles.login__imageSection__imageContainer}>
-          <div
-            className={styles.login__imageSection__imageContainer__multipleImageContainer}
-          >
-            <div
-              className={
-                styles.login__imageSection__imageContainer__multipleImageContainer__left
-              }
-            >
-              <Image
-                src={keeb1}
-                alt="keeb-1"
-                className={
-                  styles.login__imageSection__imageContainer__multipleImageContainer__left__image
-                }
-              />
-            </div>
-            <div
-              className={
-                styles.login__imageSection__imageContainer__multipleImageContainer__right
-              }
-            >
-              <Image
-                src={keeb2}
-                alt="keeb-2"
-                className={
-                  styles.login__imageSection__imageContainer__multipleImageContainer__right__image
-                }
-              />
-              <Image
-                src={keeb3}
-                alt="keeb-3"
-                className={
-                  styles.login__imageSection__imageContainer__multipleImageContainer__right__image
-                }
-              />
-            </div>
+        <div className="grid grid-cols-2 gap-3 p-3 h-screen">
+          <div className="h-full row-span-2">
+            <Image
+              src={keeb1}
+              alt="keeb-1"
+              className="w-full h-full object-cover rounded-xl"
+            />
           </div>
-          <div
-            className={styles.login__imageSection__imageContainer__singleImageContainer}
-          >
+          <div>
+            <Image
+              src={keeb2}
+              alt="keeb-2"
+              className="w-full h-full object-cover rounded-xl"
+            />
+          </div>
+          <div>
+            <Image
+              src={keeb3}
+              alt="keeb-3"
+              className="w-full h-full object-cover rounded-xl"
+            />
+          </div>
+          <div className="col-span-2 h-[65%]">
             <Image
               src={keeb4}
               alt="keeb-4"
-              className={
-                styles.login__imageSection__imageContainer__singleImageContainer__image
-              }
+              className="w-full h-full object-cover rounded-xl"
             />
           </div>
         </div>
       </div>
+
+      {/* Form Section */}
       <div className={styles.login__formSection}>
         <div className={styles.login__formSection__formContainer}>
           <Image
