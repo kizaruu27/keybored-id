@@ -51,69 +51,54 @@ export default function LoginPage() {
         </div>
 
         {/* Form Section */}
-        <div className={styles.login__formSection}>
-          <div className={styles.login__formSection__formContainer}>
-            <Image
-              src={logo}
-              alt=""
-              className={styles.login__formSection__formContainer__logo}
-            />
-            <form action="" className={styles.login__formSection__formContainer__form}>
-              <div className={styles.login__formSection__formContainer__form__formItem}>
-                <label
-                  htmlFor="email"
-                  className={
-                    styles.login__formSection__formContainer__form__formItem__label
-                  }
-                >
+        <div className="flex justify-center items-center flex-1">
+          <div className="bg-[#EEEEEE] w-[60%] xl:w-[500px] xl:h-[500px] p-10 rounded-xl flex flex-col gap-3">
+            <Image src={logo} alt="logo" />
+            <form action="" className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2">
+                <label htmlFor="email" className="text-lg">
                   email
                 </label>
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  className={
-                    styles.login__formSection__formContainer__form__formItem__input
-                  }
+                  className="p-[0.5rem] rounded-lg"
                 />
               </div>
-              <div className={styles.login__formSection__formContainer__form__formItem}>
-                <label
-                  htmlFor="password"
-                  className={
-                    styles.login__formSection__formContainer__form__formItem__label
-                  }
-                >
+              <div className="flex flex-col gap-2">
+                <label htmlFor="password" className="text-lg">
                   password
                 </label>
                 <input
                   type="password"
                   name="password"
                   id="password"
-                  className={
-                    styles.login__formSection__formContainer__form__formItem__input
-                  }
+                  className="p-[0.5rem] rounded-lg"
                 />
               </div>
-            </form>
-            <div>
               <button
-                className="bg-[#FFD20D] w-full p-2 font-semibold rounded-lg mb-5"
+                className="bg-[#FFD20D] w-full p-2 font-semibold rounded-lg mt-3"
                 type="submit"
               >
                 Sign In
               </button>
-              <button className="bg-[#D9D9D9] w-full p-2 font-semibold rounded-lg mb-5 flex items-center justify-center gap-3">
-                <Image src={google} alt="google" className="w-5" />
-                <span>Sign In with Google</span>
-              </button>
-              <p className="text-center text-sm font-semibold">
-                Don{"'"}t have an account? Sign up{" "}
-                <Link href="/register" className="text-[#1276D2]">
-                  here
-                </Link>
-              </p>
-            </div>
+              <div>
+                <button
+                  type="button"
+                  className="bg-[#D9D9D9] w-full p-2 font-semibold rounded-lg flex items-center justify-center gap-3"
+                >
+                  <Image src={google} alt="google" className="w-5" />
+                  <span>Sign In with Google</span>
+                </button>
+                <p className="text-center text-sm font-semibold mt-3">
+                  Don{"'"}t have an account? Sign up{" "}
+                  <Link href="/register" className="text-[#1276D2]">
+                    here
+                  </Link>
+                </p>
+              </div>
+            </form>
           </div>
         </div>
       </div>
